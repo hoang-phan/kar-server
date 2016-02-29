@@ -4,7 +4,7 @@ RSpec.describe PatchesController, type: :controller do
   describe 'GET index' do
     let(:patches_response) do
       patches.map do |patch|
-        patch.attributes.slice(%w(link version))
+        patch.attributes.slice(*%w(link version))
       end
     end
 
