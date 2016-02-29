@@ -6,6 +6,6 @@ class PatchesController < ApplicationController
   private
 
   def patches_response
-    Patch.all.map { |patch| patch.attributes.slice(%w(link version)) }
+    Patch.all.map { |patch| patch.attributes.slice(*%w(link version)) }
   end
 end
